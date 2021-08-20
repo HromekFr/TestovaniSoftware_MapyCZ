@@ -1,0 +1,72 @@
+TS001 - Testování vyhledávacího pole
+	TC001 - Vyhledávání podle názvu města
+	TC002 - Vyhledávání podle PSČ
+	TC003 - Vyhledávání pomocí GPS souřadnic
+	TC004 - Vyhledávání kategorie restaurace
+TS002 - Možnosti formátu map
+	TC005 - Letecká mapa
+	TC006 - Letecká mapa 3D pohled
+	TC007 - Zimní mapa
+TS003 - Geolokační možnosti
+	TC008 - Určení aktuální polohy
+	TC009 - Změna aktuální polohy
+TS004 - Vlastní uživatelský účet a možnosti po přihlášení
+	TC010 - Přihlášení
+	TC011 - Vytvoření složky pro ukládání záznamů
+	TC012 - Uložení záznamu do složky z funkce plánování
+	TC013 - Natavení adresy domů
+	TC014 - Nastavení adresy do práce
+TS005 - Možnosti sdílení
+	TC015 - Sdílení pomocí odkazu
+	TC016 - Sdílení pomocí odkazu - Facebook
+	TC017 - Sdílení pomocí emailu
+	TC018 - Sdílení pomocí QR kódu
+	TC019 - Vložení mapy do vlastních stránek
+TS006 - Panel nástroje
+	TC020 - Panel nástroje
+	TC021 - Tisk
+	TC022 - Stáhnout jako obrázek
+	TC023 - Vlastní bod na mapě
+	TC024 - Měření vzdálenosti a plochy
+	TC025 - Import GPX
+TS007 - Funkce výlet po okolí
+	TC026 - Plánování výletu
+	TC027 - Možnost pěší, cyklistický, běžkařský výlet
+	TC028 - Nastavení délky trasy
+	TC029 - Co cestou uvidíte
+TS008 - Plánování
+	TC030 - Základní plánování autem
+	TC031 - Přepínání více variant tras
+	TC032 - Přepínání mezi možnostmi trasy Rychlá, Krátká, Rychlá s provozem
+	TC033 - Možnost vyhnout se placeným úsekům
+	TC034 - Možnost plánování veřejnou dopravou
+	TC035 - Nastavení plánování veřejnou dopravou
+	TC036 - Přepinání mezi předchozími a dalšími spojeními
+	TC037 - Funkční odkaz na jednotlivé zastávky
+	TC038 - Funkce změnit směr
+	TC039 - Možnost plánování na kole
+	TC040 - Přepínání mezi horským kolem a silničním
+	TC041 - Možnost plánování pěšky
+	TC042 - Možnost krátké a turistické trasy
+	TC043 - Možnost plánování Na běžkách
+	TC044 - Možnost plánování Lodí
+	TC045 - Možnost rozkliknutí klíčových částí trasy lodí v sekci Co cestou uvidíte
+	TC046 - Možnost plánování mimo ČR
+	TC047 - Zobrazení pole při naplánování nevalidní trasy
+TS009 - Doplňkové odkazy a možnosti v pravém panelu
+	TC048 - Přepínaní jazyků rozhraní
+	TC049 - Legenda
+TS010 - Doplňkové informace o trase v možnosti Plánování
+	TC050 - Počasí na trase
+	TC051 - Změna varianty Počasí
+	TC052 - Změna datumu pro zobrazení počasí
+	TC053 - Výškový profil trasy
+	TC054 - Itinerář
+TS011 - Možnosti při vyhledávání firem a restaurací
+	TC055 - Restaurace - Recenze
+	TC056 - Restaurace - Otevírací doba
+	TC057 - Restaurace - Partneři
+TS013 - Proklik na možnosti prohlédnutí místa a fotky daného místa
+	TC058 - Fotky místa
+	TC059 - Panorama místa
+	TC060 - 3D pohled daného místa

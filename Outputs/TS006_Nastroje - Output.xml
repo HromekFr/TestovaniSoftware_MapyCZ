@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.2 (Python 3.9.5 on win32)" generated="20210513 08:40:52.423" rpa="false" schemaversion="2">
+<suite id="s1" name="TS006 Nastroje" source="D:\Projects\RobotFramework\Semestralni_projekt\TS006_Nastroje.robot">
+<test id="s1-t1" name="Pre-conditions - TS006_Nastroje">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.2</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20210513 08:40:52.681" endtime="20210513 08:40:52.681"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL_Mapy.cz}</arg>
+<arg>${ProhlizecChrome}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210513 08:40:52.682" level="INFO">Opening browser 'Chrome' to base url 'https://mapy.cz'.</msg>
+<status status="PASS" starttime="20210513 08:40:52.682" endtime="20210513 08:40:56.854"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210513 08:40:56.856" endtime="20210513 08:40:57.194"/>
+</kw>
+<status status="PASS" starttime="20210513 08:40:52.680" endtime="20210513 08:40:57.196"/>
+</test>
+<test id="s1-t2" name="TC020 - Panel nástroje">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_Nastroje}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210513 08:40:57.198" level="INFO">Clicking element '//span[contains(text(),'Nástroje')]'.</msg>
+<status status="PASS" starttime="20210513 08:40:57.197" endtime="20210513 08:40:57.730"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Panel_Nastroje}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210513 08:40:57.731" endtime="20210513 08:40:58.158"/>
+</kw>
+<status status="PASS" starttime="20210513 08:40:57.197" endtime="20210513 08:40:58.158"/>
+</test>
+<test id="s1-t3" name="TC021 - Tisk">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_Tisk}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210513 08:40:58.158" level="INFO">Clicking element '//span[contains(text(),'Tisk')]'.</msg>
+<status status="PASS" starttime="20210513 08:40:58.158" endtime="20210513 08:40:58.663"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>NEW</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20210513 08:40:58.702" endtime="20210513 08:40:59.570"/>
+</kw>
+<status status="PASS" starttime="20210513 08:40:58.158" endtime="20210513 08:40:59.570"/>
+</test>
+<test id="s1-t4" name="Post-conditions - TC021 - Tisk">
+<kw name="Close Window" library="SeleniumLibrary">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="PASS" starttime="20210513 08:40:59.573" endtime="20210513 08:40:59.817"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>MAIN</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20210513 08:40:59.818" endtime="20210513 08:41:00.242"/>
+</kw>
+<status status="PASS" starttime="20210513 08:40:59.572" endtime="20210513 08:41:00.244"/>
+</test>
+<test id="s1-t5" name="TC022 - Stáhnout jako obrázek">
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20210513 08:41:00.247" endtime="20210513 08:41:00.460"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_Nastroje}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210513 08:41:00.461" level="INFO">Clicking element '//span[contains(text(),'Nástroje')]'.</msg>
+<status status="PASS" starttime="20210513 08:41:00.461" endtime="20210513 08:41:00.917"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Button_StahnoutJakoObrazek}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210513 08:41:00.917" endtime="20210513 08:41:01.363"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_StahnoutJakoObrazek}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210513 08:41:01.363" level="INFO">Clicking element '//span[contains(text(),'Stáhnout jako obrázek')]'.</msg>
+<status status="PASS" starttime="20210513 08:41:01.363" endtime="20210513 08:41:01.820"/>
+</kw>
+<status status="PASS" starttime="20210513 08:41:00.246" endtime="20210513 08:41:01.820"/>
+</test>
+<test id="s1-t6" name="Post-conditions - TS006_Nastroje">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210513 08:41:01.822" endtime="20210513 08:41:04.111"/>
+</kw>
+<status status="PASS" starttime="20210513 08:41:01.821" endtime="20210513 08:41:04.111"/>
+</test>
+<status status="PASS" starttime="20210513 08:40:52.423" endtime="20210513 08:41:04.111"/>
+</suite>
+<statistics>
+<total>
+<stat pass="6" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="6" fail="0" skip="0" id="s1" name="TS006 Nastroje">TS006 Nastroje</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

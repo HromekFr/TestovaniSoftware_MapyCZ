@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.2 (Python 3.9.5 on win32)" generated="20210513 08:42:10.859" rpa="false" schemaversion="2">
+<suite id="s1" name="TS009 DoplnkoveFunkce" source="D:\Projects\RobotFramework\Semestralni_projekt\TS009_DoplnkoveFunkce.robot">
+<test id="s1-t1" name="Pre-conditions - TS009_DoplnkoveFunkce">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.2</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20210513 08:42:11.096" endtime="20210513 08:42:11.096"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL_Mapy.cz}</arg>
+<arg>${ProhlizecChrome}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210513 08:42:11.096" level="INFO">Opening browser 'Chrome' to base url 'https://mapy.cz'.</msg>
+<status status="PASS" starttime="20210513 08:42:11.096" endtime="20210513 08:42:15.471"/>
+</kw>
+<status status="PASS" starttime="20210513 08:42:11.096" endtime="20210513 08:42:15.474"/>
+</test>
+<test id="s1-t2" name="TC048 - Přepínaní jazyku rozhraní">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_NastaveniJazyka}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210513 08:42:15.482" level="INFO">Clicking element '//body[1]/div[1]/div[2]/div[2]/div[2]/p[1]/div[1]/a[1]'.</msg>
+<status status="PASS" starttime="20210513 08:42:15.481" endtime="20210513 08:42:16.020"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ListItem_NastaveniJazyka1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210513 08:42:16.023" level="INFO">Clicking element '//body[1]/div[1]/div[2]/div[2]/div[2]/p[1]/div[1]/ul[1]/li[1]'.</msg>
+<status status="PASS" starttime="20210513 08:42:16.022" endtime="20210513 08:42:19.079"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Button_PrihlaseniOdkaz}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210513 08:42:19.080" endtime="20210513 08:42:19.548"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${Button_PrihlaseniOdkaz}</arg>
+<arg>${Values_Polski}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20210513 08:42:19.982" level="INFO">Element '//body[1]/div[1]/div[2]/div[2]/div[1]/div[1]/form[1]/div[2]/div[1]/div[3]/a[1]' contains text 'Zaloguj się'.</msg>
+<status status="PASS" starttime="20210513 08:42:19.548" endtime="20210513 08:42:19.982"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_NastaveniJazyka}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210513 08:42:19.984" level="INFO">Clicking element '//body[1]/div[1]/div[2]/div[2]/div[2]/p[1]/div[1]/a[1]'.</msg>
+<status status="PASS" starttime="20210513 08:42:19.983" endtime="20210513 08:42:20.488"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ListItem_NastaveniJazyka1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210513 08:42:20.490" level="INFO">Clicking element '//body[1]/div[1]/div[2]/div[2]/div[2]/p[1]/div[1]/ul[1]/li[1]'.</msg>
+<status status="PASS" starttime="20210513 08:42:20.489" endtime="20210513 08:42:22.386"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Button_PrihlaseniOdkaz}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210513 08:42:22.387" endtime="20210513 08:42:22.836"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${Button_PrihlaseniOdkaz}</arg>
+<arg>${Values_Deutsch}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20210513 08:42:23.252" level="INFO">Element '//body[1]/div[1]/div[2]/div[2]/div[1]/div[1]/form[1]/div[2]/div[1]/div[3]/a[1]' contains text 'Melden Sie sich an'.</msg>
+<status status="PASS" starttime="20210513 08:42:22.836" endtime="20210513 08:42:23.252"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_NastaveniJazyka}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210513 08:42:23.254" level="INFO">Clicking element '//body[1]/div[1]/div[2]/div[2]/div[2]/p[1]/div[1]/a[1]'.</msg>
+<status status="PASS" starttime="20210513 08:42:23.252" endtime="20210513 08:42:23.696"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ListItem_NastaveniJazyka2}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210513 08:42:23.697" level="INFO">Clicking element '//body[1]/div[1]/div[2]/div[2]/div[2]/p[1]/div[1]/ul[1]/li[2]'.</msg>
+<status status="PASS" starttime="20210513 08:42:23.697" endtime="20210513 08:42:25.462"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Button_PrihlaseniOdkaz}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210513 08:42:25.463" endtime="20210513 08:42:25.899"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${Button_PrihlaseniOdkaz}</arg>
+<arg>${Values_Slovencina}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20210513 08:42:26.323" level="INFO">Element '//body[1]/div[1]/div[2]/div[2]/div[1]/div[1]/form[1]/div[2]/div[1]/div[3]/a[1]' contains text 'Prihláste sa'.</msg>
+<status status="PASS" starttime="20210513 08:42:25.899" endtime="20210513 08:42:26.323"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_NastaveniJazyka}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210513 08:42:26.323" level="INFO">Clicking element '//body[1]/div[1]/div[2]/div[2]/div[2]/p[1]/div[1]/a[1]'.</msg>
+<status status="PASS" starttime="20210513 08:42:26.323" endtime="20210513 08:42:26.806"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ListItem_NastaveniJazyka3}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210513 08:42:26.808" level="INFO">Clicking element '//body[1]/div[1]/div[2]/div[2]/div[2]/p[1]/div[1]/ul[1]/li[3]'.</msg>
+<status status="PASS" starttime="20210513 08:42:26.807" endtime="20210513 08:42:29.232"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Button_PrihlaseniOdkaz}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210513 08:42:29.234" endtime="20210513 08:42:29.683"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${Button_PrihlaseniOdkaz}</arg>
+<arg>${Values_English}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20210513 08:42:30.139" level="INFO">Element '//body[1]/div[1]/div[2]/div[2]/div[1]/div[1]/form[1]/div[2]/div[1]/div[3]/a[1]' contains text 'Log in'.</msg>
+<status status="PASS" starttime="20210513 08:42:29.683" endtime="20210513 08:42:30.139"/>
+</kw>
+<status status="PASS" starttime="20210513 08:42:15.479" endtime="20210513 08:42:30.139"/>
+</test>
+<test id="s1-t3" name="Post-conditions">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210513 08:42:30.139" endtime="20210513 08:42:32.443"/>
+</kw>
+<status status="PASS" starttime="20210513 08:42:30.139" endtime="20210513 08:42:32.443"/>
+</test>
+<status status="PASS" starttime="20210513 08:42:10.859" endtime="20210513 08:42:32.443"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="TS009 DoplnkoveFunkce">TS009 DoplnkoveFunkce</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

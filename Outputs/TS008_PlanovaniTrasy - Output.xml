@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.1 (Python 3.9.4 on win32)" generated="20210512 20:51:05.931" rpa="false" schemaversion="2">
+<suite id="s1" name="TS008 PlanovaniTrasy" source="D:\Projects\RobotFramework\Semestralni_projekt\TS008_PlanovaniTrasy.robot">
+<test id="s1-t1" name="Pre-conditions - TS008_PlanovaniTrasy">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.2</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20210512 20:51:06.174" endtime="20210512 20:51:06.174"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL_Mapy.cz}</arg>
+<arg>${ProhlizecChrome}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210512 20:51:06.175" level="INFO">Opening browser 'Chrome' to base url 'https://mapy.cz'.</msg>
+<status status="PASS" starttime="20210512 20:51:06.175" endtime="20210512 20:51:10.735"/>
+</kw>
+<status status="PASS" starttime="20210512 20:51:06.173" endtime="20210512 20:51:10.737"/>
+</test>
+<test id="s1-t2" name="TC030 - Základní plánování autem">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_Trasa}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210512 20:51:10.744" level="INFO">Clicking element '//span[contains(text(),'Trasa')]'.</msg>
+<status status="PASS" starttime="20210512 20:51:10.743" endtime="20210512 20:51:11.312"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Inputs_StartTrasy}</arg>
+<arg>${Values_KamenneZbozi}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210512 20:51:11.315" level="INFO">Typing text 'Kamenné Zboží' into text field '//body[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[3]/input[1]'.</msg>
+<status status="PASS" starttime="20210512 20:51:11.314" endtime="20210512 20:51:12.030"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20210512 20:51:12.033" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20210512 20:51:12.033" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20210512 20:51:12.033" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20210512 20:51:12.032" endtime="20210512 20:51:12.249"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Header_StartTrasy}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210512 20:51:12.251" endtime="20210512 20:51:13.128"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Inputs_CilTrasy}</arg>
+<arg>${Values_Brambory}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210512 20:51:13.128" level="INFO">Typing text 'Brambory' into text field '//body[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[3]/input[1]'.</msg>
+<status status="PASS" starttime="20210512 20:51:13.128" endtime="20210512 20:51:13.850"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20210512 20:51:13.852" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20210512 20:51:13.852" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20210512 20:51:13.852" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20210512 20:51:13.851" endtime="20210512 20:51:14.070"/>
+</kw>
+<status status="PASS" starttime="20210512 20:51:10.741" endtime="20210512 20:51:14.072"/>
+</test>
+<test id="s1-t3" name="Post-conditions - TC030 - Základní plánování autem">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Header_CilTrasy}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210512 20:51:14.078" endtime="20210512 20:51:14.952"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Button_DelkaTrasy1}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210512 20:51:14.953" endtime="20210512 20:51:15.509"/>
+</kw>
+<status status="PASS" starttime="20210512 20:51:14.076" endtime="20210512 20:51:15.509"/>
+</test>
+<test id="s1-t4" name="TC031 - Přepínání více variant tras">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_DelkaTrasy1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210512 20:51:15.512" level="INFO">Clicking element '//body[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/h3[1]/span[2]'.</msg>
+<status status="PASS" starttime="20210512 20:51:15.512" endtime="20210512 20:51:15.996"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_DelkaTrasy2}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210512 20:51:15.999" level="INFO">Clicking element '//body[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/h3[2]/span[2]'.</msg>
+<status status="PASS" starttime="20210512 20:51:15.997" endtime="20210512 20:51:16.510"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_DelkaTrasySipka}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210512 20:51:16.511" level="INFO">Clicking element '//body[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/button[1]'.</msg>
+<status status="PASS" starttime="20210512 20:51:16.510" endtime="20210512 20:51:16.983"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>${Button_DelkaTrasy2}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20210512 20:51:16.983" endtime="20210512 20:51:17.849"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_DelkaTrasySipka}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210512 20:51:17.851" level="INFO">Clicking element '//body[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/button[1]'.</msg>
+<status status="PASS" starttime="20210512 20:51:17.850" endtime="20210512 20:51:18.319"/>
+</kw>
+<status status="PASS" starttime="20210512 20:51:15.511" endtime="20210512 20:51:18.320"/>
+</test>
+<test id="s1-t5" name="TC032 - Přepínání mezi možnostmi trasy Rychlá, Krátká, Rychlá s provozem">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_MoznostiRychlostiTrasy}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210512 20:51:18.323" level="INFO">Clicking element '//body[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]'.</msg>
+<status status="PASS" starttime="20210512 20:51:18.322" endtime="20210512 20:51:18.792"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ListItem_MoznostRychlostTrasy1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210512 20:51:18.793" level="INFO">Clicking element '//body[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/ul[1]/li[1]'.</msg>
+<status status="PASS" starttime="20210512 20:51:18.793" endtime="20210512 20:51:19.265"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Button_MoznostiRychlostiTrasy}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210512 20:51:19.266" endtime="20210512 20:51:19.706"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_MoznostiRychlostiTrasy}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210512 20:51:19.707" level="INFO">Clicking element '//body[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]'.</msg>
+<status status="PASS" starttime="20210512 20:51:19.707" endtime="20210512 20:51:20.162"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ListItem_MoznostRychlostTrasy2}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210512 20:51:20.163" level="INFO">Clicking element '//body[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/ul[1]/li[2]'.</msg>
+<status status="PASS" starttime="20210512 20:51:20.163" endtime="20210512 20:51:20.635"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Button_MoznostiRychlostiTrasy}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210512 20:51:20.637" endtime="20210512 20:51:21.232"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_MoznostiRychlostiTrasy}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210512 20:51:21.234" level="INFO">Clicking element '//body[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]'.</msg>
+<status status="PASS" starttime="20210512 20:51:21.233" endtime="20210512 20:51:21.702"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ListItem_MoznostRychlostTrasy3}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210512 20:51:21.704" level="INFO">Clicking element '//body[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/ul[1]/li[3]'.</msg>
+<status status="PASS" starttime="20210512 20:51:21.703" endtime="20210512 20:51:22.217"/>
+</kw>
+<status status="PASS" starttime="20210512 20:51:18.322" endtime="20210512 20:51:22.218"/>
+</test>
+<test id="s1-t6" name="TC033 - Možnost vyhnout se placeným úsekům">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_VyhnoutSePlacenymUsekum}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210512 20:51:22.225" level="INFO">Clicking element '//span[contains(text(),'Vyhnout se placeným úsekům')]'.</msg>
+<status status="PASS" starttime="20210512 20:51:22.224" endtime="20210512 20:51:22.798"/>
+</kw>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>${Inputs_PlaceneUsekyCheckbox}</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20210512 20:51:22.801" level="INFO">Verifying checkbox '//body[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/label[1]/input[1]' is selected.</msg>
+<status status="PASS" starttime="20210512 20:51:22.800" endtime="20210512 20:51:23.788"/>
+</kw>
+<status status="PASS" starttime="20210512 20:51:22.222" endtime="20210512 20:51:23.790"/>
+</test>
+<test id="s1-t7" name="TC034 - Možnost plánování veřejnou dopravou">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${Button_PlanovaniVerejnaDoprava}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210512 20:51:23.797" level="INFO">Clicking button '//body[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/button[2]'.</msg>
+<status status="PASS" starttime="20210512 20:51:23.796" endtime="20210512 20:51:24.967"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Panel_Spojeni}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210512 20:51:24.969" endtime="20210512 20:51:25.846"/>
+</kw>
+<status status="PASS" starttime="20210512 20:51:23.794" endtime="20210512 20:51:25.847"/>
+</test>
+<test id="s1-t8" name="TC035 - Nastavení plánování veřejnou dopravou">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Inputs_DatumSpoje}</arg>
+<arg>${Values_DatumSpojePresne}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210512 20:51:25.850" level="INFO">Typing text '25.06.2021 11:23' into text field '//body[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[2]/input[1]'.</msg>
+<status status="PASS" starttime="20210512 20:51:25.850" endtime="20210512 20:51:26.650"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20210512 20:51:26.653" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20210512 20:51:26.653" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20210512 20:51:26.653" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20210512 20:51:26.652" endtime="20210512 20:51:26.900"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Header_DatumSpoje}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210512 20:51:26.901" endtime="20210512 20:51:27.341"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${Header_DatumSpoje}</arg>
+<arg>${Values_DatumSpoje}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20210512 20:51:27.781" level="INFO">Element '//body[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[3]/h2[1]' contains text '25. 6. 13:44 – 15:54'.</msg>
+<status status="PASS" starttime="20210512 20:51:27.342" endtime="20210512 20:51:27.781"/>
+</kw>
+<status status="PASS" starttime="20210512 20:51:25.849" endtime="20210512 20:51:27.782"/>
+</test>
+<test id="s1-t9" name="TC036 - Přepinání mezi předchozími a dalšími spojeními">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_PredchoziSpojeni}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210512 20:51:27.785" level="INFO">Clicking element '//button[contains(text(),'Předchozí spojení')]'.</msg>
+<status status="PASS" starttime="20210512 20:51:27.784" endtime="20210512 20:51:28.283"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Header_DatumSpoje}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20210512 20:51:28.517" level="INFO">Suppressing StaleElementReferenceException from Selenium.</msg>
+<status status="PASS" starttime="20210512 20:51:28.285" endtime="20210512 20:51:29.191"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${Header_DatumSpoje}</arg>
+<arg>${Values_DatumSpojePredchozi}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20210512 20:51:29.650" level="INFO">Element '//body[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[3]/h2[1]' contains text '25. 6. 10:44 – 13:41'.</msg>
+<status status="PASS" starttime="20210512 20:51:29.192" endtime="20210512 20:51:29.650"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_DalsiSpojeni}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210512 20:51:29.653" level="INFO">Clicking element '//button[contains(text(),'Další spojení')]'.</msg>
+<status status="PASS" starttime="20210512 20:51:29.652" endtime="20210512 20:51:30.125"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Header_DatumSpoje}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20210512 20:51:30.385" level="INFO">Suppressing StaleElementReferenceException from Selenium.</msg>
+<status status="PASS" starttime="20210512 20:51:30.127" endtime="20210512 20:51:31.069"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_DalsiSpojeni}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210512 20:51:31.072" level="INFO">Clicking element '//button[contains(text(),'Další spojení')]'.</msg>
+<status status="PASS" starttime="20210512 20:51:31.071" endtime="20210512 20:51:31.540"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Header_DatumSpoje}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210512 20:51:31.542" endtime="20210512 20:51:32.059"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${Header_DatumSpoje}</arg>
+<arg>${Values_DatumSpojeDalsi}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20210512 20:51:32.500" level="INFO">Element '//body[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[3]/h2[1]' contains text '25. 6. 14:44 – 16:50'.</msg>
+<status status="PASS" starttime="20210512 20:51:32.061" endtime="20210512 20:51:32.500"/>
+</kw>
+<status status="PASS" starttime="20210512 20:51:27.784" endtime="20210512 20:51:32.502"/>
+</test>
+<test id="s1-t10" name="TC037 - Funkční odkaz na jednotlivé zastávky">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_SpojZeStaniceKamenneZbozi}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210512 20:51:32.510" level="INFO">Clicking element '//a[contains(text(),'Kamenné Zboží')]'.</msg>
+<status status="PASS" starttime="20210512 20:51:32.509" endtime="20210512 20:51:33.016"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Panel_SpojeOdsud}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210512 20:51:33.017" endtime="20210512 20:51:33.529"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${Header_SpojeOdsud}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210512 20:51:33.969" level="INFO">Element '//h3[contains(text(),'Spoje odsud')]' is displayed.</msg>
+<status status="PASS" starttime="20210512 20:51:33.533" endtime="20210512 20:51:33.969"/>
+</kw>
+<status status="PASS" starttime="20210512 20:51:32.506" endtime="20210512 20:51:33.971"/>
+</test>
+<test id="s1-t11" name="Post-conditions - TC037 - Funkční odkaz na jednotlivé zastávky">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_Zavrit}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210512 20:51:33.978" level="INFO">Clicking element '//button[contains(text(),'Zavřít')]'.</msg>
+<status status="PASS" starttime="20210512 20:51:33.977" endtime="20210512 20:51:34.488"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_Autem}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210512 20:51:34.492" level="INFO">Clicking element '//body[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/button[1]'.</msg>
+<status status="PASS" starttime="20210512 20:51:34.490" endtime="20210512 20:51:35.008"/>
+</kw>
+<status status="PASS" starttime="20210512 20:51:33.975" endtime="20210512 20:51:35.011"/>
+</test>
+<test id="s1-t12" name="TC038 - Změnit směr">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_ZmenitSmer}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210512 20:51:35.020" level="INFO">Clicking element '//span[contains(text(),'Změnit směr')]'.</msg>
+<status status="PASS" starttime="20210512 20:51:35.019" endtime="20210512 20:51:35.665"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Panel_Planovani}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210512 20:51:35.666" endtime="20210512 20:51:36.243"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${Header_StartTrasyRelative}</arg>
+<arg>${Values_Brambory}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20210512 20:51:36.713" level="INFO">Element '//body[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[3]/h4[1]' contains text 'Brambory'.</msg>
+<status status="PASS" starttime="20210512 20:51:36.244" endtime="20210512 20:51:36.713"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${Header_CilTrasyRelative}</arg>
+<arg>${Values_KamenneZbozi}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20210512 20:51:37.183" level="INFO">Element '//body[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div[3]/h4[1]' contains text 'Kamenné Zboží'.</msg>
+<status status="PASS" starttime="20210512 20:51:36.715" endtime="20210512 20:51:37.183"/>
+</kw>
+<status status="PASS" starttime="20210512 20:51:35.017" endtime="20210512 20:51:37.184"/>
+</test>
+<test id="s1-t13" name="Post-condition - TC038 - Změnit směr">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_ZrusitStartTrasy}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210512 20:51:37.188" level="INFO">Clicking element '//body[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[3]/button[1]'.</msg>
+<status status="PASS" starttime="20210512 20:51:37.187" endtime="20210512 20:51:37.702"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Button_ZrusitCilTrasy}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210512 20:51:37.703" endtime="20210512 20:51:38.144"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_ZrusitCilTrasy}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210512 20:51:38.147" level="INFO">Clicking element '//body[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[3]/button[1]'.</msg>
+<status status="PASS" starttime="20210512 20:51:38.146" endtime="20210512 20:51:38.660"/>
+</kw>
+<status status="PASS" starttime="20210512 20:51:37.186" endtime="20210512 20:51:38.662"/>
+</test>
+<test id="s1-t14" name="TC044 - Plánování lodí">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Inputs_StartTrasy}</arg>
+<arg>${Values_Postrelmov}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210512 20:51:38.669" level="INFO">Typing text 'Postřelmov' into text field '//body[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[3]/input[1]'.</msg>
+<status status="PASS" starttime="20210512 20:51:38.668" endtime="20210512 20:51:39.396"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20210512 20:51:39.397" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20210512 20:51:39.397" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20210512 20:51:39.397" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20210512 20:51:39.396" endtime="20210512 20:51:39.616"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Header_StartTrasyRelative}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210512 20:51:39.616" endtime="20210512 20:51:40.498"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Inputs_CilTrasy}</arg>
+<arg>${Values_LukaviceNaMorave}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210512 20:51:40.500" level="INFO">Typing text 'Lukavice na Moravě' into text field '//body[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[3]/input[1]'.</msg>
+<status status="PASS" starttime="20210512 20:51:40.499" endtime="20210512 20:51:41.221"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20210512 20:51:41.224" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20210512 20:51:41.224" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20210512 20:51:41.224" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20210512 20:51:41.223" endtime="20210512 20:51:41.443"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_Lodi}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210512 20:51:41.446" level="INFO">Clicking element '//body[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/button[6]'.</msg>
+<status status="PASS" starttime="20210512 20:51:41.444" endtime="20210512 20:51:41.960"/>
+</kw>
+<status status="PASS" starttime="20210512 20:51:38.666" endtime="20210512 20:51:41.962"/>
+</test>
+<test id="s1-t15" name="TC045 - Možnost rozkliknutí klíčových částí trasy lodí v sekci Co cestou uvidíte">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Header_JezLukavice}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210512 20:51:41.968" endtime="20210512 20:51:43.267"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Header_JezLukavice}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210512 20:51:43.268" level="INFO">Clicking element '//h4[contains(text(),'Morava, km 288,0 - jez Lukavice')]'.</msg>
+<status status="PASS" starttime="20210512 20:51:43.268" endtime="20210512 20:51:43.769"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Header_Sjizdeni}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210512 20:51:43.770" endtime="20210512 20:51:44.265"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${Header_Prenaseni}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210512 20:51:44.704" level="INFO">Element '//b[contains(text(),'Přenášení:')]' is displayed.</msg>
+<status status="PASS" starttime="20210512 20:51:44.267" endtime="20210512 20:51:44.704"/>
+</kw>
+<status status="PASS" starttime="20210512 20:51:41.966" endtime="20210512 20:51:44.705"/>
+</test>
+<test id="s1-t16" name="Post-condtions - TC045 - Možnost rozkliknutí klíčových částí trasy lodí v sekci Co cestou uvidíte">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_Zavrit}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210512 20:51:44.710" level="INFO">Clicking element '//button[contains(text(),'Zavřít')]'.</msg>
+<status status="PASS" starttime="20210512 20:51:44.709" endtime="20210512 20:51:45.204"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_ZrusitStartTrasy}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210512 20:51:45.207" level="INFO">Clicking element '//body[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[3]/button[1]'.</msg>
+<status status="PASS" starttime="20210512 20:51:45.206" endtime="20210512 20:51:45.709"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Button_ZrusitCilTrasy}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210512 20:51:45.710" endtime="20210512 20:51:46.150"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_ZrusitCilTrasy}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210512 20:51:46.152" level="INFO">Clicking element '//body[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[3]/button[1]'.</msg>
+<status status="PASS" starttime="20210512 20:51:46.151" endtime="20210512 20:51:46.620"/>
+</kw>
+<status status="PASS" starttime="20210512 20:51:44.708" endtime="20210512 20:51:46.622"/>
+</test>
+<test id="s1-t17" name="TC047 - Zobrazení pole při naplánování nevalidní trasy">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Inputs_StartTrasy}</arg>
+<arg>${Values_Mladcova}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210512 20:51:46.628" level="INFO">Typing text 'Mladcová' into text field '//body[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[3]/input[1]'.</msg>
+<status status="PASS" starttime="20210512 20:51:46.628" endtime="20210512 20:51:47.343"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20210512 20:51:47.346" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20210512 20:51:47.346" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20210512 20:51:47.346" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20210512 20:51:47.345" endtime="20210512 20:51:47.564"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Header_StartTrasyRelative}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210512 20:51:47.566" endtime="20210512 20:51:48.447"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Inputs_CilTrasy}</arg>
+<arg>${Values_Kocanda}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210512 20:51:48.450" level="INFO">Typing text 'Kocanda' into text field '//body[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[3]/input[1]'.</msg>
+<status status="PASS" starttime="20210512 20:51:48.449" endtime="20210512 20:51:49.236"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20210512 20:51:49.236" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20210512 20:51:49.236" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20210512 20:51:49.236" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20210512 20:51:49.236" endtime="20210512 20:51:49.455"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_Lodi}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210512 20:51:49.457" level="INFO">Clicking element '//body[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/button[6]'.</msg>
+<status status="PASS" starttime="20210512 20:51:49.456" endtime="20210512 20:51:49.909"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Header_NevalidniTrasa}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210512 20:51:49.909" endtime="20210512 20:51:50.773"/>
+</kw>
+<status status="PASS" starttime="20210512 20:51:46.627" endtime="20210512 20:51:50.774"/>
+</test>
+<test id="s1-t18" name="Post-conditions - TS008_PlanovaniTrasy">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210512 20:51:50.776" endtime="20210512 20:51:53.118"/>
+</kw>
+<status status="PASS" starttime="20210512 20:51:50.776" endtime="20210512 20:51:53.118"/>
+</test>
+<status status="PASS" starttime="20210512 20:51:05.933" endtime="20210512 20:51:53.122"/>
+</suite>
+<statistics>
+<total>
+<stat pass="18" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="18" fail="0" skip="0" id="s1" name="TS008 PlanovaniTrasy">TS008 PlanovaniTrasy</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
